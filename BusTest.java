@@ -47,8 +47,8 @@ public class BusTest {
 
   @Test
   public void canCollect(){
-    new_stop = busStop.addQueuer(person);
-    assertEquals(1, theBus.collect(new_stop, person));
+    busStop.addQueuer(person);
+    theBus.collect(busStop, person);
+    assertEquals(1, theBus.getPassengerNumbers());
   }
-
 }

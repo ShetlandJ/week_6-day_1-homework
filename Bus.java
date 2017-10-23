@@ -40,7 +40,7 @@ class Bus{
   }
 
   public void collect(BusStop busStop, Person person){
-    if(!isBusFull() && !busStop.isBusStopEmpty()){
+    if(!isBusFull() || !busStop.isBusStopEmpty()){
       int counter = getPassengerNumbers();
       this.passengers[counter] = person;
     }
